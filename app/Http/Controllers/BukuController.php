@@ -146,6 +146,6 @@ class BukuController extends Controller
 
         $buku->delete();
 
-        return back()->with('success','Buku Berhasil dihapus');
+        return redirect("/")->with('success','Buku Berhasil dihapus');
     }
 }
