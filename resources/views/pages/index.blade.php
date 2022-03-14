@@ -33,7 +33,7 @@
                     </td>
                     <td class="d-flex">
                         <a href="/buku/{{$buku->id}}/edit" class="btn btn-sm btn-warning me-2"><i class="bi bi-pencil-square"></i></a>
-                        <form action="{{ url('buku' , $buku->id)}}" method="post">
+                        <form action="{{ url('buku' , $buku->id)}}" method="post" onclick="confirmDelete()">
                             @csrf
                             @method('delete')
                             <button class="btn btn-sm btn-danger" type="submit">

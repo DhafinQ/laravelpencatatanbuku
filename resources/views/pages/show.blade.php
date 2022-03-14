@@ -16,9 +16,9 @@
                     <h3 class="pe-4">{{ $buku -> judul}}</h3>
                 </div>
                 <div class="d-flex flex-row-reverse">
-                    <form action="{{ url('buku' , $buku->id)}}" method="post">
+                    <form action="{{ url('buku' , $buku->id)}}" method="post" onclick="confirmDelete()">
                             @csrf
-                            @method('delete')
+                            @method('DELETE')
                             <button class="btn btn-danger" type="submit">
                                 <i class="bi bi-trash"></i> Hapus Buku
                             </button>
@@ -45,15 +45,15 @@
                         </tr>
                         <tr>
                             <td><strong>Tahun Terbit</strong></td>
-                            <td>{{ $buku->tahunterbit }}</td>
+                            <td>{{ $buku->tahunterbit ? $buku->tahunterbit : 'N\A'}}</td>
                         </tr>
                         <tr>
                             <td><strong>Jumlah Halaman</strong></td>
-                            <td>{{ $buku->jumlahhalaman }}</td>
+                            <td>{{ $buku->jumlahhalaman ? $buku->jumlahhalaman : 'N\A' }}</td>
                         </tr>
                         <tr>
                             <td><strong>Ukuran</strong></td>
-                            <td>{{ $buku->ukuran }} cm</td>
+                            <td>{{ $buku->ukuran ? $buku->ukuran . ' cm' : 'N\A' }}</td>
                         </tr>
                         <tr>
                             <td><strong>Sinopsis</strong></td>
