@@ -49,11 +49,17 @@
                         </tr>
                         <tr>
                             <td><strong>Jumlah Halaman</strong></td>
+
+                            <td>{{ $buku->jumlahhalaman ? $buku->jumlahhalaman : 'N\A' }}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Jumlah Halaman</strong></td>
                             <td>{{ $buku->jumlahhalaman ? $buku->jumlahhalaman : 'N\A' }}</td>
                         </tr>
                         <tr>
                             <td><strong>Ukuran</strong></td>
-                            <td>{{ $buku->ukuran ? $buku->ukuran . ' cm' : 'N\A' }}</td>
+                            <td>{{ $buku->ukuran ? $buku->ukuran : 'N/A' }} cm</td>
+
                         </tr>
                         <tr>
                             <td><strong>Sinopsis</strong></td>
