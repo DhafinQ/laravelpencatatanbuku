@@ -1,5 +1,7 @@
 # Laravel Pencatatan Buku
-Simple Aplikasi Web CRUD menggunakan Laravel. kamu bisa :
+Simple Aplikasi Web CRUD menggunakan Laravel. 
+
+## kamu bisa :
 
 - Mempost buku yang sudah terdaftar ISBN
 - Mengedit Data buku
